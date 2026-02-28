@@ -1,0 +1,8 @@
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/BackendApplication.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/config/WebConfig.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/dto/ExpenseRequest.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/dto/SummaryResponse.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/model/Expense.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/repository/ExpenseRepository.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/service/ExpenseService.java
+/Users/ms/term6/it/backend/src/main/java/com/jarbudget/backend/web/ExpenseController.java
