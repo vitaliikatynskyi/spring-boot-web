@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-# JarBudget — Spring Boot backend + React frontend (B)
-=======
 # JarBudget — Spring Boot backend + React frontend (A2)
->>>>>>> develop
 
 A lightweight personal expense tracker: Spring Boot REST API for storing expenses and getting summaries, plus a Vite/React frontend scaffold.
 
