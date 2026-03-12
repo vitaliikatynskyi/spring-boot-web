@@ -1,0 +1,12 @@
+{
+  "name": "lab-test-runner",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test:unit": "mvn -q test && npm run -C frontend test:unit",
+    "test:coverage": "mvn -q test && npm run -C frontend test:coverage",
+    "test:e2e": "npm run -C frontend test:e2e",
+    "test": "npm run test:unit && npm run test:e2e",
+    "test:broken": "npm run -C frontend test:broken"
+  }
+}
