@@ -1,28 +1,26 @@
 # JarBudget MVP (React + Vite + Spring Boot)
 
-![CI Pipeline]([ВСТАВИТИ_BADGE_URL])
+![CI Pipeline](https://github.com/vitaliikatynskyi/spring-boot-web/actions/workflows/ci-cd.yml/badge.svg)
 
 Навчальний MVP застосунок для обліку витрат: фронтенд на React + Vite, бекенд на Spring Boot.
 
 ## Demo
 
-- Production: [ВСТАВИТИ_PRODUCTION_URL]
-- Repository: [ВСТАВИТИ_REPOSITORY_URL]
+- Repository: [https://github.com/vitaliikatynskyi/spring-boot-web](https://github.com/vitaliikatynskyi/spring-boot-web)
 
 ## Tech Stack
 
 - Frontend: React, Vite, React Router, ESLint, Vitest
 - Backend: Java 17, Spring Boot, Spring Data JPA, H2
 - CI: GitHub Actions
-- CD: Vercel (frontend deployment)
 
 ## Getting Started
 
 ### 1) Клонування репозиторію
 
 ```bash
-git clone [ВСТАВИТИ_REPOSITORY_URL]
-cd spring-boot-web_lab2
+git clone https://github.com/vitaliikatynskyi/spring-boot-web.git
+cd spring-boot-web
 ```
 
 ### 2) Запуск frontend
