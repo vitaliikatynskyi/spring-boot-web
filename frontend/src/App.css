@@ -250,3 +250,44 @@ main h2 {
     margin-right: 8px;
   }
 }
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 10% 10%, #f5f0ff 0, #f7f9ff 30%, #eef7ff 60%, #fefefe 100%);
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.login-card h1 {
+  margin: 12px 0 8px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.logout-link {
+  background: none;
+  border: none;
+  color: #0f66ff;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.summary-main {
+  margin: 20px 0;
+}
