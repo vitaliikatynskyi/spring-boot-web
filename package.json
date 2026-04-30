@@ -8,6 +8,7 @@
     "test:coverage": "./mvnw -q test && npm run -C frontend test:coverage",
     "test:e2e": "npm run -C frontend test:e2e",
     "test": "npm run test:unit && npm run test:e2e",
-    "test:broken": "npm run -C frontend test:broken"
+    "test:broken": "npm run -C frontend test:broken",
+    "build": "npm run -C frontend build"
   }
 }
