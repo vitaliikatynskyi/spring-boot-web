@@ -50,21 +50,22 @@ function useExpenses(user) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       })
-    } catch (e) { /* ignore */ }
+    } catch { /* ignore */ }
   }
 
   const remove = async (id) => {
-    const updated = expenses.filter(e => e.id !== id)
+    const updated = expenses.filter(expense => expense.id !== id)
     saveToLocal(updated)
 
     // Спроба відправити на бекенд
     try {
       fetch(`${API_BASE}/api/expenses/${id}`, { method: 'DELETE' })
-    } catch (e) { /* ignore */ }
+    } catch { /* ignore */ }
   }
 
   useEffect(() => {
     if (user) load()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user])
 
   return { expenses, loading, add, remove, reload: load }
