@@ -8,6 +8,8 @@ frontend/node_modules/
 node_modules/
 dist/
 .env
+.npm-cache
+frontend/.npm-cache
 
 *.raw
 *./Users/ms/spring-boot-web_lab2/lab3_report_assets
