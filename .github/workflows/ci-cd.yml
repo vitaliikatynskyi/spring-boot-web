@@ -1,0 +1,52 @@
+name: CI/CD Pipeline
+
+# Тригери для запуску пайплайну
+on:
+  # Запуск при push у гілки main та develop
+  push:
+    branches:
+      - main
+      - develop
+  # Запуск при створенні Pull Request
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  # Job для збірки та тестування
+  build-and-test:
+    name: Build and Test
+    runs-on: ubuntu-latest
+
+    steps:
+      # Крок 1: Отримання коду з репозиторію
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Крок 2: Налаштування Java (необхідно для Maven тестів)
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      # Крок 3: Налаштування Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # Крок 4: Встановлення залежностей
+      - name: Install dependencies
+        run: npm ci
+
+      # Крок 5: Перевірка якості коду (Linting)
+      - name: Run linter
+        run: npm run lint
+
+      # Крок 6: Запуск юніт-тестів
+      - name: Run unit tests
+        run: npm run test:unit
