@@ -87,4 +87,4 @@ npm run preview
 
 ## Production Link
 
-- Live URL: [ВСТАВИТИ_PRODUCTION_URL]
+- Live URL: https://frontend-haiv4rlyi-vityllas-projects.vercel.app/
