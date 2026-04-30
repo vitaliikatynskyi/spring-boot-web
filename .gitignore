@@ -2,7 +2,6 @@ target/
 *.log
 *.iml
 *.class
-.mvn/wrapper/maven-wrapper.jar
 .DS_Store
 frontend/node_modules/
 node_modules/
