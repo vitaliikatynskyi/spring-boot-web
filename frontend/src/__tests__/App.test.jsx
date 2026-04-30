@@ -1,4 +1,4 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { MemoryRouter } from 'react-router-dom'
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
@@ -31,8 +31,13 @@ const buildFetchStub = (initial = []) => {
   })
 }
 
+beforeEach(() => {
+  localStorage.setItem('app_user', 'TestUser')
+})
+
 afterEach(() => {
   vi.restoreAllMocks()
+  localStorage.clear()
 })
 
 describe('App', () => {
@@ -70,7 +75,7 @@ describe('App', () => {
     await user.type(screen.getByLabelText('Назва'), 'Book')
     await user.type(screen.getByLabelText('Категорія'), 'Study')
     await user.type(screen.getByLabelText('Сума, ₴'), '15')
-    await user.click(screen.getByRole('button', { name: 'Додати' }))
+    await user.click(screen.getByRole('button', { name: 'Зберегти' }))
 
     await waitFor(() => expect(fetchStub.mock.calls.length).toBeGreaterThan(1))
     const postCall = fetchStub.mock.calls.find(([, options]) => options?.method === 'POST')
@@ -92,7 +97,7 @@ describe('App', () => {
       </MemoryRouter>
     )
 
-    expect(await screen.findByText(/Загалом:/)).toHaveTextContent('₴ 50.00')
+    expect(await screen.findByText(/Всього:/)).toHaveTextContent('₴ 50.00')
     expect(screen.getByText(/Home: ₴ 30.00/)).toBeInTheDocument()
     expect(screen.getByText(/Transport: ₴ 20.00/)).toBeInTheDocument()
   })
@@ -106,8 +111,8 @@ describe('App', () => {
     )
     
     const user = userEvent.setup()
-    await user.click(screen.getByRole('link', { name: 'Калькулятор' }))
-    expect(await screen.findByText('Калькулятор витрат')).toBeInTheDocument()
+    await user.click(screen.getByRole('link', { name: 'Статистика' }))
+    expect(await screen.findByText('Підсумок витрат')).toBeInTheDocument()
   })
 
   it('deletes an expense correctly', async () => {
@@ -132,7 +137,7 @@ describe('App', () => {
     expect(screen.queryByText('Burger')).not.toBeInTheDocument()
   })
 
-  it('displays "Без категорії" defaults for expenses lacking category', async () => {
+  it('displays "Інше" defaults for expenses lacking category', async () => {
     const fetchStub = buildFetchStub([{ title: 'MysteryItem', amount: 99, date: '2024-02-05' }])
     vi.stubGlobal('fetch', fetchStub)
     
@@ -142,6 +147,6 @@ describe('App', () => {
       </MemoryRouter>
     )
     
-    expect(await screen.findByText(/Без категорії: ₴ 99\.00/)).toBeInTheDocument()
+    expect(await screen.findByText(/Інше: ₴ 99\.00/)).toBeInTheDocument()
   })
 })
