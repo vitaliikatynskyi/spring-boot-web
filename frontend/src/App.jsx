@@ -81,7 +81,7 @@ function LoginForm({ onLogin }) {
   return (
     <div className="login-screen">
       <form className="card login-card" onSubmit={submit}>
-        <p className="eyebrow">UniDone App</p>
+        <p className="eyebrow">JarBudget App</p>
         <h1>Вітаємо!</h1>
         <p className="muted">Введіть своє ім'я, щоб почати</p>
         <label className="field">
@@ -238,7 +238,7 @@ function NavBar({ user, onLogout }) {
   const location = useLocation()
   return (
     <nav className="nav">
-      <div className="brand">UniDone</div>
+      <div className="brand">JarBudget</div>
       <div className="links">
         <Link className={location.pathname === '/' ? 'active' : ''} to="/">
           Головна
