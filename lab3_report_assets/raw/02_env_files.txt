@@ -1,5 +1,0 @@
-.env
-VITE_APP_STATUS=Development
-
-.env.production
-VITE_APP_STATUS=Production Mode

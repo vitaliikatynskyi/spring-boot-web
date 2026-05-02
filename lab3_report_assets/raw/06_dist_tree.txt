@@ -1,4 +1,0 @@
-dist/assets/index-BVqHyI2U.css
-dist/assets/index-CgHjxyeR.js
-dist/index.html
-dist/vite.svg

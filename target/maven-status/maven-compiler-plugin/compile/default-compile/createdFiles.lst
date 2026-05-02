@@ -1,8 +1,0 @@
-com/jarbudget/backend/BackendApplication.class
-com/jarbudget/backend/repository/ExpenseRepository.class
-com/jarbudget/backend/model/Expense.class
-com/jarbudget/backend/dto/ExpenseRequest.class
-com/jarbudget/backend/dto/SummaryResponse.class
-com/jarbudget/backend/web/ExpenseController.class
-com/jarbudget/backend/config/WebConfig.class
-com/jarbudget/backend/service/ExpenseService.class

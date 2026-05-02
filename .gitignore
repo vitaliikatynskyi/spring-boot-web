@@ -1,14 +1,50 @@
+# ─── Java / Maven ────────────────────────────────────────────────────────────
 target/
-*.log
-*.iml
 *.class
-.DS_Store
-frontend/node_modules/
-node_modules/
-dist/
-.env
-.npm-cache
-frontend/.npm-cache
-
+*.jar
+*.war
+*.ear
+*.iml
 *.raw
-*./Users/ms/spring-boot-web_lab2/lab3_report_assets
+hs_err_pid*
+
+# ─── H2 / Database runtime files ─────────────────────────────────────────────
+data/
+*.mv.db
+*.trace.db
+
+# ─── Node / npm ──────────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/.npm-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ─── Frontend build output ────────────────────────────────────────────────────
+dist/
+frontend/dist/
+frontend/coverage/
+
+# ─── Vercel ──────────────────────────────────────────────────────────────────
+.vercel/
+frontend/.vercel/
+
+# ─── Environment variables ────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+
+# ─── OS / IDE noise ──────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+.idea/
+*.iws
+*.ipr
+.vscode/
+
+# ─── Test artefacts (keep source, ignore output) ─────────────────────────────
+frontend/coverage/

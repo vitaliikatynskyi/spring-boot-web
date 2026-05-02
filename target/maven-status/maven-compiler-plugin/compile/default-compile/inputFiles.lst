@@ -1,8 +1,0 @@
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/BackendApplication.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/config/WebConfig.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/dto/ExpenseRequest.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/dto/SummaryResponse.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/model/Expense.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/repository/ExpenseRepository.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/service/ExpenseService.java
-/Users/ms/spring-boot-web.git/spring-boot-web/src/main/java/com/jarbudget/backend/web/ExpenseController.java
